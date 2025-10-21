@@ -7,7 +7,6 @@ mod db;
 mod epoll_server;
 mod model;
 mod protocol;
-mod server;
 mod vector_search;
 
 use signal_hook::iterator::Signals;
