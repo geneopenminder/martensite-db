@@ -2,13 +2,13 @@
 
 ## What is Martensite-DB?
 
-ProjectName is an experimental NoSQL, single-threaded, append-only database written in Rust. \
-Inspired by Cassandra and Scylla — and designed for extreme performance. \
-It uses a columnar storage layout to enable future support for FAISS vector indexes, making it well-suited for analytical and AI-driven workloads. \
-A core design choice is that all data and indexes are stored directly in memory-mapped files, with no internal object representation. \
-This approach allows the database to write data directly to the socket buffer with near-zero overhead, pushing it toward a true zero-copy architecture. \
-There is no internal cache — the system relies solely on the operating system’s page cache. \
-Open adressing hash map used as primary key index, locates in memory mapped files. 
+Martensite-DB is an experimental, single-threaded, append-only NoSQL database written in Rust.
+Inspired by Cassandra and Scylla, it is designed for extreme performance.
+It uses a columnar storage layout to enable future support for FAISS vector indexes, making it well-suited for analytical and AI-driven workloads.
+A core design choice is that all data and indexes are stored directly in memory-mapped files, with no internal object representation.
+This approach allows the database to write data directly to the socket buffer with near-zero overhead, pushing it toward a true zero-copy architecture.
+There is no internal cache — the system relies entirely on the operating system’s page cache.
+An open-addressing hash map is used as the primary key index and is stored in memory-mapped files. 
 
 Key features:
 
